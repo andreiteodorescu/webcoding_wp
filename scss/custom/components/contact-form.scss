@@ -4,7 +4,7 @@
   color: #fff;
 
   &-title {
-    margin-bottom: 35px;
+    margin-bottom: 50px;
     text-shadow: 2px 2px rgba(0,0,0,0.2);
 
     &:after {
@@ -14,10 +14,14 @@
 
   &-field-wrap {
     margin-bottom: 35px;
+    font-weight: 300;
+
+    &.err .input-field, &.err .enquire-form-textarea {
+      border: 1px solid #be2edd;
+    }
   }
 
   &-label {
-    font-weight: 300;
     display: block;
     margin: 0 0 8px;
     text-shadow: 2px 2px rgba(0,0,0,0.1);
@@ -34,8 +38,52 @@
   outline: none;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
   padding: 15px 18px 16px;
+  transition: 0.75s ease all;
 }
 
 .enquire-form-textarea {
   resize: none;
+}
+
+[class^="wpcf7-"] + p {
+  display: none;
+}
+
+.enquire-form-submit {
+  transition: 0.3s ease all;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  padding: 16px 79px 15px;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+  border: none;
+  border-radius: 0;
+  outline: none;
+  text-decoration: none;
+  z-index: 2;
+
+  &:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #be2edd;
+    z-index: -2;
+  }
+
+  &:hover {
+    color: #fff;
+
+    &:before {
+      transition: 0.5s all ease;
+      left: 0;
+      right: 0;
+      opacity: 1;
+    }
+  }
 }

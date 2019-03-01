@@ -13,88 +13,8 @@ function validEmail (string) {
 }*/
 
 $(function(){
-    /*
-    $("#menu-trigger").on("click", function () {
-        var btn = $(this),
-        menu = $("#menu"),
-        menu_state = btn.data("menuState"),
-        moveTo = 0;
 
-        if (menu_state === "collapsed") {
-            menu.css("display", "block");
-            btn.addClass("active");
-            moveTo = menu.width();
-            btn.data("menuState", "expanded");
-            menu.height($(document).height() - parseInt(menu.css("paddingTop"), 10));
-            $("body").addClass("active-m");
-        } else {
-            btn.data("menuState", "collapsed");
-            menu.css("display", "none");
-            btn.removeClass("active");
-            $("body").removeClass("active-m");
-        }
-
-        $("#wrapper").animate({
-            right: moveTo
-        }, 200);
-    });
-
-
-
-    //close menu when click/tap outside of it
-	if(Modernizr.mq('only screen and (max-width: 769px)')){
-		/!*$(document).on('touchstart', function() {
-			documentClick = true;
-		});
-		$(document).on('touchmove', function() {
-			documentClick = false;
-		});*!/
-		$(document).on('click touchend', function(event) {
-			if (event.type === "click") documentClick = true;
-			if (event.type === "touchend") documentClick = true;
-			if (documentClick){
-				if($(".menu-inner").css("display") === "block") {
-					if ($(event.target).closest('.header').length === 0) {
-						$(".menu-inner").css("display", "none");
-						$("#menu-trigger").removeClass("active");
-						$(".menu-inner").css("height", "auto");
-						$("#wrapper").animate({right: 0}, 200);
-						$("body").removeClass("active-m");
-						$("#menu-trigger").data("menuState", "collapsed");
-					}
-				}
-			}
-
-		 });
-	 }
-	
-	
-	// Call on every window resize - Hide menu on resize
-	var winWidth = $(window).width();
-	
-	$(window).resize(function(){
-		if($(window).width() !== winWidth){
-		  if(Modernizr.mq('only screen and (min-width: 769px)')){
-				if($(".menu-inner").css("display") == "none" || $("#menu-trigger").hasClass("active")) {
-					$("#menu-trigger").removeClass("active");
-					$(".menu-inner").css("display", "block");
-					$(".menu-inner").css("height", "auto");
-					$("#wrapper").css("right", 0);
-					$("body").removeClass("active-m");
-					$("#menu-trigger").data("menuState", "collapsed");
-				}
-			} else {
-				if($(".menu-inner").css("display") == "block") {
-					$(".menu-inner").css("display", "none");
-					$("#menu-trigger").removeClass("active");
-					$(".menu-inner").css("height", "auto");
-					$("#wrapper").css("right", 0);
-					$("body").removeClass("active-m");
-					$("#menu-trigger").data("menuState", "collapsed");
-				}
-			}
-		}
-	}).resize();*/
+    AOS.init();
 
     $('#navbar-toggler').on('click', function () {
         var btn = $(this);
@@ -133,7 +53,7 @@ $(function(){
 	// General forms validation
 	$("form").each(function () {
 		var form = $(this),
-			btn = form.find("[type='submit']"),
+			btn = form.find("#submit"),
 			inputs = form.find(".wpcf7-validates-as-required");
 
 		btn.click(function (e) {
@@ -159,8 +79,8 @@ $(function(){
 					(isCheckbox && !input.get(0).checked)
 				) {
 					go = false;
-					parent.closest('.field-wrap').find('.error').css('display', 'block');
-					parent.closest('.field-wrap').addClass("err");
+					parent.closest('.component-contact-field-wrap').find('.error').css('display', 'block');
+					parent.closest('.component-contact-field-wrap').addClass("err");
 					return true; // go to the next input in the loop
 				}
 				
@@ -175,8 +95,8 @@ $(function(){
 
 				// if we're here, the input is valid,
 				// and we hide the corresponding error message
-				parent.closest('.field-wrap').removeClass("err");
-				parent.closest('.field-wrap').find('.error').css('display', 'none');
+				parent.closest('.component-contact-field-wrap').removeClass("err");
+				parent.closest('.component-contact-field-wrap').find('.error').css('display', 'none');
 			});
 
 			// focus the first erroneous input

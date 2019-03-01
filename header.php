@@ -68,21 +68,23 @@
 
 <div class="navbar-wrapper">
     <div class="container">
-        <nav class="navbar d-flex justify-content-between justify-content-sm-start">
+        <nav class="navbar d-flex justify-content-between align-items-center">
 
             <a class="navbar-brand" href="/" title="Webcoding by Andrei Teodorescu">
                 <img src="<?php bloginfo('template_directory'); ?>/images/webcoding-logo.png" alt="Webcoding logo">
             </a>
 
-            <button id="navbar-toggler" class="navbar-toggler d-block d-sm-none" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="go-to-form" href="#">Let's Talk</a>
+
+            <!--<button id="navbar-toggler" class="navbar-toggler d-block d-sm-none" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="navbar-toggler-icon"></i>
             </button>
 
             <div class="navbar-collapse d-flex flex-grow-1 justify-content-sm-end" id="navbarNav">
                 <ul class="list-unstyled navbar-nav d-flex align-items-center flex-column flex-sm-row">
-                    <?php wp_nav_menu(array('menu' => 'Header Menu', 'container' => false, 'items_wrap' => '%3$s')); ?>
+                    <?php /*wp_nav_menu(array('menu' => 'Header Menu', 'container' => false, 'items_wrap' => '%3$s')); */?>
                 </ul>
-            </div>
+            </div>-->
 
         </nav>
     </div>

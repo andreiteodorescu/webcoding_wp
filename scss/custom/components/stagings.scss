@@ -4,6 +4,7 @@
   background-image: linear-gradient(45deg,#58e7f5 0,#01cfe3 50%,rgba(79, 59, 219, 0.8) 100%);
   text-align: center;
   color: #fff;
+  overflow: hidden;
 
   &-text {
     animation: 1.15s .25s backwards cubic-bezier(.24, .96, .46, 1.01) show-hero;
@@ -11,7 +12,7 @@
     &-undertitle {
       font-size:4.5rem;
       font-weight: 800;
-      line-height:1.5;
+      line-height:$line-height;
       text-shadow: 2px 2px rgba(0,0,0,0.2);
     }
   }
@@ -32,7 +33,7 @@
   display: block;
   width: 78px;
   height: 156px;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   bottom: 2vh;
   left: 50%;
