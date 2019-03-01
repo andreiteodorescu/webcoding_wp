@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,800');
 
 @import "../bootstrap/functions";
 @import "../bootstrap/variables";
@@ -17,3 +17,7 @@
 @import "global.scss";
 @import "components/navbar.scss";
 @import "components/stagings.scss";
+@import "components/about.scss";
+@import "components/portfolio.scss";
+@import "components/contact-form.scss";
+@import "components/aos.scss";

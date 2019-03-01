@@ -1,0 +1,58 @@
+.component-portfolio-item {
+  margin-bottom: 30px;
+}
+
+.component-portfolio-inner {
+  box-shadow: 0 4px 10px 5px rgba(0,0,0,0.1);
+  padding: 40px 45px;
+  text-align: center;
+  position: relative;
+  height: 350px;
+
+  &-title {
+    font-weight: 800;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+  }
+}
+
+.project-year {
+  position: absolute;
+  right:0;
+  top: 0;
+  background-color: #be2edd;
+  padding:20px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.project-tech {
+  font-weight: 300;
+
+  a {
+    position: relative;
+    cursor: default;
+    padding-left: 12px;
+    margin-left: 8px;
+    color: $text-default;
+
+    &:hover {
+      color: $text-default;
+    }
+
+    &:before {
+      content:"";
+      position: absolute;
+      left:0;
+      top:11px;
+      width: 4px;
+      height:4px;
+      border-radius: 50%;
+      background-color: #be2edd;
+    }
+
+    &:first-child:before {
+      display: none;
+    }
+  }
+}

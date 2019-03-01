@@ -33,10 +33,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Temporary start -->
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style_old.css" media="all" />
+    <!--<link rel="stylesheet" type="text/css" href="<?php /*bloginfo('template_directory'); */?>/style_old.css" media="all" />-->
     <!-- Temporary end -->
 
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/dist/css/animate.css" media="all" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/dist/css/style.css" media="all" />
 
 	<?php wp_head(); ?>
@@ -67,28 +66,7 @@
 </head>
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 
-<!--<div class="wrapper clear" id="wrapper">
-	<header class="header clear">
-		<div class="container">
-			<a class="title" href="/" title="Webcoding by Andrei Teodorescu">
-				<img src="<?php /*bloginfo('template_directory'); */?>/images/webcoding-logo.png" alt="Webcoding logo">
-			</a>
-			
-			<nav class="menu">				
-				<button type="button" class="button-menu hidden" id="menu-trigger" data-menu-state="collapsed">
-					<span></span>
-				</button>
-				
-				<ul class="menu-inner" id="menu">
-					<?php /*wp_nav_menu(array('menu' => 'Header Menu', 'container' => false, 'items_wrap' => '%3$s')); */?>
-				</ul>
-			</nav>
-		</div>
-	</header>-->
-
-
-
-
+<div class="navbar-wrapper">
     <div class="container">
         <nav class="navbar d-flex justify-content-between justify-content-sm-start">
 
@@ -108,3 +86,4 @@
 
         </nav>
     </div>
+</div>

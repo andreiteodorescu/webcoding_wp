@@ -1,0 +1,18 @@
+.component-about {
+
+  &-info {
+    &-title {
+      margin-bottom: 20px;
+
+      &:after {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.img-shadow {
+  box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.1),0 30px 60px 0 rgba(0, 0, 0, 0.2);
+}
+
