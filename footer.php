@@ -1,5 +1,5 @@
 
-	<footer class="footer" role="contentinfo">
+	<footer class="footer component-margin" role="contentinfo">
 		<div class="container">
 			<ul class="list-unstyled social">
 				<li class="social-item"><a href="https://www.facebook.com/webcodingnet/" title="Like WebCoding's page on Facebook" target="_blank"><img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/images/fbsocial.png" alt="Facebook icon"></a></li>

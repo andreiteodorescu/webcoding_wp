@@ -4,7 +4,7 @@
 
 .component-portfolio-inner {
   box-shadow: 0 4px 10px 5px rgba(0,0,0,0.1);
-  padding: 40px 45px;
+  padding: 20px;
   text-align: center;
   position: relative;
   height: 350px;
@@ -51,8 +51,23 @@
       background-color: #be2edd;
     }
 
-    &:first-child:before {
-      display: none;
+    &:first-child {
+      margin-left: 0;
+      padding-left: 0;
+
+      &:before {
+        display: none;
+      }
     }
+  }
+}
+
+@media (max-width: 991px) {
+  .project-year {
+    padding: 15px;
+  }
+
+  .component-portfolio-inner-title {
+    font-size: 2.5rem;
   }
 }

@@ -1,19 +1,11 @@
-.component-about {
+.component-about-info {
+  &-title {
+    margin-bottom: 20px;
+  }
 
-  &-info {
-    &-title {
-      margin-bottom: 20px;
-
-      &:after {
-        margin-left: 0;
-        margin-right: 0;
-      }
-    }
-
-    &-undertitle {
-      font-weight: 300;
-      line-height: $line-height;
-    }
+  &-undertitle {
+    font-weight: 300;
+    line-height: $line-height;
   }
 }
 
@@ -21,3 +13,9 @@
   box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.1),0 30px 60px 0 rgba(0, 0, 0, 0.2);
 }
 
+@include media-breakpoint-up(lg) { // @media (min-width: 992px) {}
+  .component-about-info-title:after {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

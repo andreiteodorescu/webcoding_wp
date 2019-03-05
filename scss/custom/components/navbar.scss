@@ -1,24 +1,41 @@
+@keyframes change-init {
+  from { color: #fff }
+  to   { color: #be2edd }
+}
+
+@keyframes change-hover {
+  from { color: #be2edd }
+  to   { color: #fff }
+}
+
 .navbar {
   padding: 15px 0;
 
-  &-brand img {
-    width: 50px;
+  &-brand {
+    font-family: 'Black Ops One', cursive;
+    color: #fff;
+    mix-blend-mode: difference;
+    font-size: 3.4rem;
+    //transition: color 0.2s ease;
+    //text-shadow: 1px 2px rgba(0,0,0,.1);
+
+    span {
+      animation: change-init 3s ease-in forwards;
+    }
+
+    &:hover {
+      color:#fff;
+    }
+
+    i {
+      font-style: normal;
+      display: inline-block;
+    }
   }
 
   &-wrapper {
     position: absolute;
     width: 100%;
     z-index: 1;
-  }
-}
-
-.go-to-form {
-  color:#fff;
-  font-weight: 300;
-  transition: color 0.2s ease;
-  text-shadow: 1px 1px rgba(0,0,0,0.1);
-
-  &:hover {
-    color:#be2edd;
   }
 }

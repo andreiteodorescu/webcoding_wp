@@ -14,7 +14,9 @@ function validEmail (string) {
 
 $(function(){
 
-    AOS.init();
+    AOS.init({
+		disable: 'mobile'
+	});
 
     $('#navbar-toggler').on('click', function () {
         var btn = $(this);
@@ -119,4 +121,19 @@ $(function(){
 	$(".project-tech a").on("click", function (e) {
 		e.preventDefault();
 	});
+
+    // Target anchor smooth scroll
+    $("a[href^='#']").on('click', function(e) {
+        e.preventDefault();
+
+        // store hash
+        var hash = this.hash;
+        var hashname = hash.substring(1);
+
+        if($("#" + hashname).length > 0) {
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 500);
+        }
+    });
 });
