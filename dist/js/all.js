@@ -18,22 +18,7 @@ $(function(){
 		disable: 'mobile'
 	});
 
-    $('#navbar-toggler').on('click', function () {
-        var btn = $(this);
-
-        if (btn.attr('aria-expanded') === 'false') {
-            btn.addClass('active');
-            $('#navbarNav').addClass('show');
-            btn.attr('aria-expanded', 'true');
-            $('body').addClass('show-nav');
-        } else {
-            btn.attr('aria-expanded', 'false');
-            $('#navbarNav').removeClass('show');
-            btn.removeClass('active');
-            $('body').removeClass('show-nav');
-        }
-    });
-
+    //Staging background changing animation
     $(".staging").mousemove(function( event ) {
         var w = $(this).width(),
             //pct = 360*(+event.pageX)/w,
@@ -42,6 +27,7 @@ $(function(){
         $(".staging").css("background-image", bg);
     });
 
+    // Staging hand animation
     $(window).scroll(function() {
         //Go-to button on scroll animation
         if ($(this).scrollTop() > 0) {
@@ -123,7 +109,7 @@ $(function(){
 	});
 
     // Target anchor smooth scroll
-    $("a[href^='#']").on('click', function(e) {
+    $("a[href^='#']").on('click touchend', function(e) {
         e.preventDefault();
 
         // store hash

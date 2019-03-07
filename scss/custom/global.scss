@@ -1,9 +1,5 @@
 .main {
-  transition: transform .5s ease;
-}
-
-.show-nav .main {
-  transform: translateX(-25%);
+  overflow-x: hidden;
 }
 
 .container-custom {

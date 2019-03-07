@@ -10,7 +10,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="keywords" content="webcoding, web coding, andrei teodorescu, front-end developer, front end developer, ux developer, web designer, psd-sketch to html services" />
 	
-	<link rel="canonical" href="http://webcoding.ro/">
+	<link rel="canonical" href="https://www.webcoding.ro/">
 	
 	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -31,10 +31,6 @@
 	<meta name="theme-color" content="#ffffff">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Temporary start -->
-    <!--<link rel="stylesheet" type="text/css" href="<?php /*bloginfo('template_directory'); */?>/style_old.css" media="all" />-->
-    <!-- Temporary end -->
 
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/dist/css/style.css" media="all" />
 
