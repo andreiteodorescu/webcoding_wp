@@ -20,7 +20,7 @@ module.exports = function(grunt) {
         // Minify all.js file for production
         uglify: {
             options: {
-                sourceMap: true
+                sourceMap: false
             },
             dist: {
                 files: {

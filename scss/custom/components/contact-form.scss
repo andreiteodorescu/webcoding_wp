@@ -49,3 +49,12 @@
 [class^="wpcf7-"] + p {
   display: none;
 }
+
+div.wpcf7-response-output {
+  margin-left:0 !important;
+  margin-right:0 !important;
+}
+
+div.wpcf7-mail-sent-ok {
+  border-color: #fff !important;
+}

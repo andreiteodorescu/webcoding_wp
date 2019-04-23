@@ -74,7 +74,7 @@ function isValidEmail ($email) {
 
 add_image_size( 'preview_size', 650, 400, true );
 
-add_action( 'wp_print_scripts', 'my_deregister_javascript', 100 );
+/*add_action( 'wp_print_scripts', 'my_deregister_javascript', 100 );
 	function my_deregister_javascript() {
 	  if ( is_front_page() ) {
 		wp_deregister_script( 'contact-form-7' );
@@ -87,7 +87,7 @@ add_action( 'wp_print_scripts', 'my_deregister_javascript', 100 );
 	  if ( is_front_page() ) {
 		wp_deregister_style( 'contact-form-7' );
 	}
-}
+}*/
 
 remove_action( 'wp_head', 'wp_generator' );
 remove_action( 'wp_head', 'rest_output_link_wp_head' );
